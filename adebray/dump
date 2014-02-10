@@ -1,0 +1,995 @@
+tmp :  "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" |
+tmp :  "u" | "v" | "w" | "x" | "y" | "z" ;
+tmp :  "nous" | "vous" | "ils" | "elles" ;
+tree : <0x7fed70c03810>
+* tree->str : 'terminal'
+tree->type : '0'
+tree->status : '2'
+	tree : <0x7fed70c04550>
+	* tree->str : 'a'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03880>
+	* tree->str : 'b'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c038b0>
+	* tree->str : 'c'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c038e0>
+	* tree->str : 'd'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03910>
+	* tree->str : 'e'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03940>
+	* tree->str : 'f'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03970>
+	* tree->str : 'g'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c039a0>
+	* tree->str : 'h'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c039d0>
+	* tree->str : 'i'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03a00>
+	* tree->str : 'j'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03a30>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c03f50>
+* tree->str : 'mot'
+tree->type : '0'
+tree->status : '3'
+	tree : <0x7fed70c04660>
+	* tree->str : 'terminal'
+	tree->type : '0'
+	tree->status : '0'
+		tree : <0x7fed70c04550>
+		* tree->str : 'a'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03880>
+		* tree->str : 'b'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c038b0>
+		* tree->str : 'c'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c038e0>
+		* tree->str : 'd'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03910>
+		* tree->str : 'e'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03940>
+		* tree->str : 'f'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03970>
+		* tree->str : 'g'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c039a0>
+		* tree->str : 'h'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c039d0>
+		* tree->str : 'i'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03a00>
+		* tree->str : 'j'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03a30>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c04680>
+	* tree->str : 'terminal'
+	tree->type : '0'
+	tree->status : '1'
+		tree : <0x7fed70c04550>
+		* tree->str : 'a'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03880>
+		* tree->str : 'b'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c038b0>
+		* tree->str : 'c'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c038e0>
+		* tree->str : 'd'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03910>
+		* tree->str : 'e'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03940>
+		* tree->str : 'f'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03970>
+		* tree->str : 'g'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c039a0>
+		* tree->str : 'h'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c039d0>
+		* tree->str : 'i'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03a00>
+		* tree->str : 'j'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03a30>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c046b0>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c04310>
+* tree->str : 'sujet'
+tree->type : '0'
+tree->status : '2'
+	tree : <0x7fed70c03fa0>
+	* tree->str : 'je'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03fc0>
+	* tree->str : 'tu'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03ff0>
+	* tree->str : 'il'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c04020>
+	* tree->str : 'elle'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c04050>
+	* tree->str : 'on'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c04080>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c043a0>
+* tree->str : 'verbe'
+tree->type : '0'
+tree->status : '0'
+	tree : <0x7fed70c040d0>
+	* tree->str : 'manger'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c040f0>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c03cf0>
+* tree->str : 'complement'
+tree->type : '0'
+tree->status : '3'
+	tree : <0x7fed70c03d80>
+	* tree->str : 'mot'
+	tree->type : '0'
+	tree->status : '0'
+		tree : <0x7fed70c04660>
+		* tree->str : 'terminal'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c04550>
+			* tree->str : 'a'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03880>
+			* tree->str : 'b'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038b0>
+			* tree->str : 'c'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038e0>
+			* tree->str : 'd'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03910>
+			* tree->str : 'e'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03940>
+			* tree->str : 'f'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03970>
+			* tree->str : 'g'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039a0>
+			* tree->str : 'h'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039d0>
+			* tree->str : 'i'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a00>
+			* tree->str : 'j'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a30>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c04680>
+		* tree->str : 'terminal'
+		tree->type : '0'
+		tree->status : '1'
+			tree : <0x7fed70c04550>
+			* tree->str : 'a'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03880>
+			* tree->str : 'b'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038b0>
+			* tree->str : 'c'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038e0>
+			* tree->str : 'd'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03910>
+			* tree->str : 'e'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03940>
+			* tree->str : 'f'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03970>
+			* tree->str : 'g'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039a0>
+			* tree->str : 'h'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039d0>
+			* tree->str : 'i'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a00>
+			* tree->str : 'j'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a30>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c046b0>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c03da0>
+	* tree->str : ' '
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03dc0>
+	* tree->str : 'mot'
+	tree->type : '0'
+	tree->status : '1'
+		tree : <0x7fed70c04660>
+		* tree->str : 'terminal'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c04550>
+			* tree->str : 'a'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03880>
+			* tree->str : 'b'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038b0>
+			* tree->str : 'c'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038e0>
+			* tree->str : 'd'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03910>
+			* tree->str : 'e'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03940>
+			* tree->str : 'f'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03970>
+			* tree->str : 'g'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039a0>
+			* tree->str : 'h'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039d0>
+			* tree->str : 'i'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a00>
+			* tree->str : 'j'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a30>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c04680>
+		* tree->str : 'terminal'
+		tree->type : '0'
+		tree->status : '1'
+			tree : <0x7fed70c04550>
+			* tree->str : 'a'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03880>
+			* tree->str : 'b'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038b0>
+			* tree->str : 'c'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c038e0>
+			* tree->str : 'd'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03910>
+			* tree->str : 'e'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03940>
+			* tree->str : 'f'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03970>
+			* tree->str : 'g'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039a0>
+			* tree->str : 'h'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c039d0>
+			* tree->str : 'i'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a00>
+			* tree->str : 'j'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03a30>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c046b0>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c03e20>
+	* tree->str : ' '
+	tree->type : '1'
+	tree->status : '1'
+	tree : <0x7fed70c03e50>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c04ac0>
+* tree->str : 'rule'
+tree->type : '0'
+tree->status : '3'
+	tree : <0x7fed70c03eb0>
+	* tree->str : 'sujet'
+	tree->type : '0'
+	tree->status : '0'
+		tree : <0x7fed70c03fa0>
+		* tree->str : 'je'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03fc0>
+		* tree->str : 'tu'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03ff0>
+		* tree->str : 'il'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c04020>
+		* tree->str : 'elle'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c04050>
+		* tree->str : 'on'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c04080>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c03ed0>
+	* tree->str : ' '
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c03f00>
+	* tree->str : 'verbe'
+	tree->type : '0'
+	tree->status : '0'
+		tree : <0x7fed70c040d0>
+		* tree->str : 'manger'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c040f0>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c03f30>
+	* tree->str : ' '
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c04400>
+	* tree->str : 'complement'
+	tree->type : '0'
+	tree->status : '0'
+		tree : <0x7fed70c03d80>
+		* tree->str : 'mot'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c04660>
+			* tree->str : 'terminal'
+			tree->type : '0'
+			tree->status : '0'
+				tree : <0x7fed70c04550>
+				* tree->str : 'a'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03880>
+				* tree->str : 'b'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038b0>
+				* tree->str : 'c'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038e0>
+				* tree->str : 'd'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03910>
+				* tree->str : 'e'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03940>
+				* tree->str : 'f'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03970>
+				* tree->str : 'g'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039a0>
+				* tree->str : 'h'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039d0>
+				* tree->str : 'i'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a00>
+				* tree->str : 'j'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a30>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c04680>
+			* tree->str : 'terminal'
+			tree->type : '0'
+			tree->status : '1'
+				tree : <0x7fed70c04550>
+				* tree->str : 'a'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03880>
+				* tree->str : 'b'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038b0>
+				* tree->str : 'c'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038e0>
+				* tree->str : 'd'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03910>
+				* tree->str : 'e'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03940>
+				* tree->str : 'f'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03970>
+				* tree->str : 'g'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039a0>
+				* tree->str : 'h'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039d0>
+				* tree->str : 'i'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a00>
+				* tree->str : 'j'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a30>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c046b0>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c03da0>
+		* tree->str : ' '
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03dc0>
+		* tree->str : 'mot'
+		tree->type : '0'
+		tree->status : '1'
+			tree : <0x7fed70c04660>
+			* tree->str : 'terminal'
+			tree->type : '0'
+			tree->status : '0'
+				tree : <0x7fed70c04550>
+				* tree->str : 'a'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03880>
+				* tree->str : 'b'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038b0>
+				* tree->str : 'c'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038e0>
+				* tree->str : 'd'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03910>
+				* tree->str : 'e'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03940>
+				* tree->str : 'f'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03970>
+				* tree->str : 'g'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039a0>
+				* tree->str : 'h'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039d0>
+				* tree->str : 'i'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a00>
+				* tree->str : 'j'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a30>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c04680>
+			* tree->str : 'terminal'
+			tree->type : '0'
+			tree->status : '1'
+				tree : <0x7fed70c04550>
+				* tree->str : 'a'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03880>
+				* tree->str : 'b'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038b0>
+				* tree->str : 'c'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c038e0>
+				* tree->str : 'd'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03910>
+				* tree->str : 'e'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03940>
+				* tree->str : 'f'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03970>
+				* tree->str : 'g'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039a0>
+				* tree->str : 'h'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c039d0>
+				* tree->str : 'i'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a00>
+				* tree->str : 'j'
+				tree->type : '1'
+				tree->status : '0'
+				tree : <0x7fed70c03a30>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c046b0>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c03e20>
+		* tree->str : ' '
+		tree->type : '1'
+		tree->status : '1'
+		tree : <0x7fed70c03e50>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c04430>
+	* tree->str : '\n'
+	tree->type : '1'
+	tree->status : '0'
+	tree : <0x7fed70c04460>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
+tree : <0x7fed70c03b40>
+* tree->str : 'grammar'
+tree->type : '0'
+tree->status : '0'
+	tree : <0x7fed70c044a0>
+	* tree->str : 'rule'
+	tree->type : '0'
+	tree->status : '1'
+		tree : <0x7fed70c03eb0>
+		* tree->str : 'sujet'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c03fa0>
+			* tree->str : 'je'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03fc0>
+			* tree->str : 'tu'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03ff0>
+			* tree->str : 'il'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c04020>
+			* tree->str : 'elle'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c04050>
+			* tree->str : 'on'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c04080>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c03ed0>
+		* tree->str : ' '
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c03f00>
+		* tree->str : 'verbe'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c040d0>
+			* tree->str : 'manger'
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c040f0>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c03f30>
+		* tree->str : ' '
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c04400>
+		* tree->str : 'complement'
+		tree->type : '0'
+		tree->status : '0'
+			tree : <0x7fed70c03d80>
+			* tree->str : 'mot'
+			tree->type : '0'
+			tree->status : '0'
+				tree : <0x7fed70c04660>
+				* tree->str : 'terminal'
+				tree->type : '0'
+				tree->status : '0'
+					tree : <0x7fed70c04550>
+					* tree->str : 'a'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03880>
+					* tree->str : 'b'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038b0>
+					* tree->str : 'c'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038e0>
+					* tree->str : 'd'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03910>
+					* tree->str : 'e'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03940>
+					* tree->str : 'f'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03970>
+					* tree->str : 'g'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039a0>
+					* tree->str : 'h'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039d0>
+					* tree->str : 'i'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a00>
+					* tree->str : 'j'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a30>
+					* tree->str : '(null)'
+					tree->type : '-1'
+					tree->status : '-1'
+				tree : <0x7fed70c04680>
+				* tree->str : 'terminal'
+				tree->type : '0'
+				tree->status : '1'
+					tree : <0x7fed70c04550>
+					* tree->str : 'a'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03880>
+					* tree->str : 'b'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038b0>
+					* tree->str : 'c'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038e0>
+					* tree->str : 'd'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03910>
+					* tree->str : 'e'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03940>
+					* tree->str : 'f'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03970>
+					* tree->str : 'g'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039a0>
+					* tree->str : 'h'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039d0>
+					* tree->str : 'i'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a00>
+					* tree->str : 'j'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a30>
+					* tree->str : '(null)'
+					tree->type : '-1'
+					tree->status : '-1'
+				tree : <0x7fed70c046b0>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c03da0>
+			* tree->str : ' '
+			tree->type : '1'
+			tree->status : '0'
+			tree : <0x7fed70c03dc0>
+			* tree->str : 'mot'
+			tree->type : '0'
+			tree->status : '1'
+				tree : <0x7fed70c04660>
+				* tree->str : 'terminal'
+				tree->type : '0'
+				tree->status : '0'
+					tree : <0x7fed70c04550>
+					* tree->str : 'a'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03880>
+					* tree->str : 'b'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038b0>
+					* tree->str : 'c'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038e0>
+					* tree->str : 'd'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03910>
+					* tree->str : 'e'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03940>
+					* tree->str : 'f'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03970>
+					* tree->str : 'g'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039a0>
+					* tree->str : 'h'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039d0>
+					* tree->str : 'i'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a00>
+					* tree->str : 'j'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a30>
+					* tree->str : '(null)'
+					tree->type : '-1'
+					tree->status : '-1'
+				tree : <0x7fed70c04680>
+				* tree->str : 'terminal'
+				tree->type : '0'
+				tree->status : '1'
+					tree : <0x7fed70c04550>
+					* tree->str : 'a'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03880>
+					* tree->str : 'b'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038b0>
+					* tree->str : 'c'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c038e0>
+					* tree->str : 'd'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03910>
+					* tree->str : 'e'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03940>
+					* tree->str : 'f'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03970>
+					* tree->str : 'g'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039a0>
+					* tree->str : 'h'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c039d0>
+					* tree->str : 'i'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a00>
+					* tree->str : 'j'
+					tree->type : '1'
+					tree->status : '0'
+					tree : <0x7fed70c03a30>
+					* tree->str : '(null)'
+					tree->type : '-1'
+					tree->status : '-1'
+				tree : <0x7fed70c046b0>
+				* tree->str : '(null)'
+				tree->type : '-1'
+				tree->status : '-1'
+			tree : <0x7fed70c03e20>
+			* tree->str : ' '
+			tree->type : '1'
+			tree->status : '1'
+			tree : <0x7fed70c03e50>
+			* tree->str : '(null)'
+			tree->type : '-1'
+			tree->status : '-1'
+		tree : <0x7fed70c04430>
+		* tree->str : '\n'
+		tree->type : '1'
+		tree->status : '0'
+		tree : <0x7fed70c04460>
+		* tree->str : '(null)'
+		tree->type : '-1'
+		tree->status : '-1'
+	tree : <0x7fed70c044c0>
+	* tree->str : '(null)'
+	tree->type : '-1'
+	tree->status : '-1'
