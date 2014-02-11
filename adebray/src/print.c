@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/11 13:54:26 by Arno              #+#    #+#             */
-/*   Updated: 2014/02/11 13:56:38 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/11 18:26:58 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void		print_tree_adress(t_tree *tree, int i)
 {
 	while (i--)
 		ft_printf("\t");
-	ft_printf("\e[38;5;%umtree : <%p>\n", (unsigned int)tree % 255 + 1, tree);
+	ft_printf("\e[38;5;%umtree : <%p>\n", ((unsigned long int)tree) % 255 + 1, tree);
 	ft_printf("\e[39m");
 }
 
