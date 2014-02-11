@@ -6,7 +6,7 @@
 /*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/02 17:27:11 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/06 22:30:30 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/11 14:28:34 by Arno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@
 
 #include <stdlib.h>
 #include <term.h>
-
-typedef struct		s_gnl
-{
-	char			*str;
-	struct s_gnl	*next;
-}					t_gnl;
 
 enum				e_tree_type
 {
@@ -45,6 +39,14 @@ typedef struct		s_tree
 	struct s_tree	*next;
 }					t_tree;
 
+typedef struct		s_ope
+{
+	char			equals;
+	char			dquote;
+	char			crush;
+}					t_ope;
+
 t_tree				*create_node(void);
+void				print_tree(t_tree *tree, int i);
 
 #endif

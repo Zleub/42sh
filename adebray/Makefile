@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adebray <adebray@student.42.fr>            +#+  +:+       +#+         #
+#    By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/16 20:25:00 by adebray           #+#    #+#              #
-#    Updated: 2014/02/03 19:46:49 by adebray          ###   ########.fr        #
+#    Updated: 2014/02/11 13:55:52 by Arno             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME		= ft_sh3
@@ -18,7 +18,8 @@ SRCDIR		= ./src/
 HEADDIR		= ./inc/
 
 SRC			=	./src/gnl.c \
-				./src/init.c
+				./src/init.c \
+				./src/print.c
 
 OBJ			= $(subst .c,.o,$(SRC))
 
