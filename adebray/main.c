@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/02 11:12:01 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/11 15:07:17 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/11 23:32:55 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,38 @@ char	*ft_strndup(const char *s1, int n)
 	}
 }
 
+int				get_node(t_ope *ope, t_tree *tree, char *str, int i)
+{
+	char		buf[4096];
+	int			j;
+
+	i += 1;
+	j = 0;
+	ft_strclr(buf);
+	while (ope->dquote)
+	{
+		buf[j] = str[i];
+		if (str[i] == '"')
+			ope->dquote = 0;
+		j += 1;
+		i += 1;
+	}
+	tree->leaf->str = ft_strndup(buf, j - 1);
+	tree->leaf->type = LEAF;
+	if (ope->crush == 1)
+		tree->leaf->status = LOOP;
+	else
+		tree->leaf->status = ONCE;
+	return (i);
+}
+
 void			function_to_create_leaf_child_node(t_tree *tree, t_tree *tree_head, char *str)
 {
 	int		i;
 	int		j;
-	char	buf[4096];
 	t_ope	*ope;
 	t_tree	*leaf_head;
-
+	char		buf[4096];
 	t_tree	*tmp = tree_head;
 
 	ope = (t_ope *)malloc(sizeof(t_ope));
@@ -93,26 +117,27 @@ void			function_to_create_leaf_child_node(t_tree *tree, t_tree *tree_head, char 
 					tree->leaf = create_node();
 					leaf_head = tree->leaf;
 				}
-				i += 1;
-				j = 0;
-				ft_strclr(buf);
-				while (ope->dquote)
-				{
-					buf[j] = str[i];
-					if (str[i] == '"')
-						ope->dquote = 0;
-					j += 1;
-					i += 1;
-				}
-				tree->leaf->str = ft_strndup(buf, j - 1);
-				tree->leaf->type = LEAF;
-				if (ope->crush == 1)
-					tree->leaf->status = LOOP;
-				else
-					tree->leaf->status = ONCE;
+
+				i = get_node(ope, tree, str, i);
+				// i += 1;
+				// j = 0;
+				// ft_strclr(buf);
+				// while (ope->dquote)
+				// {
+				// 	buf[j] = str[i];
+				// 	if (str[i] == '"')
+				// 		ope->dquote = 0;
+				// 	j += 1;
+				// 	i += 1;
+				// }
+				// tree->leaf->str = ft_strndup(buf, j - 1);
+				// tree->leaf->type = LEAF;
+				// if (ope->crush == 1)
+				// 	tree->leaf->status = LOOP;
+				// else
+				// 	tree->leaf->status = ONCE;
 				tree->leaf->next = create_node();
 				tree->leaf = tree->leaf->next;
-
 			}
 			else if (ft_isalpha(str[i]) && ope->equals == 1) /* IF NODE */
 			{
@@ -207,7 +232,7 @@ t_tree		*fd_to_tree(int fd)
 		free (tmp);
 		tmp = NULL;
 	}
-	return (tree);
+	return (tree_head);
 }
 
 int			main(void)
