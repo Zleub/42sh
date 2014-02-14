@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sh.h                                               :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 00:16:09 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/13 21:36:04 by gbir             ###   ########.fr       */
+/*   Created: 2013/11/27 00:23:42 by adebray           #+#    #+#             */
+/*   Updated: 2013/12/29 15:52:25 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SH_H
-# define SH_H
-# include <stdarg.h>
+#include <libft.h>
 
-int		allfree(int nb, ...);
-#endif
+int		ft_strequ(char const *s1, char const *s2)
+{
+	if (s1 != NULL && s2 != NULL)
+	{
+		if (ft_strcmp(s1, s2) != 0)
+			return (0);
+		else
+			return (1);
+	}
+	return (0);
+}

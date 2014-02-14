@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sh.h                                               :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 00:16:09 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/13 21:36:04 by gbir             ###   ########.fr       */
+/*   Created: 2013/11/27 00:23:42 by adebray           #+#    #+#             */
+/*   Updated: 2014/01/15 19:34:27 by Arno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SH_H
-# define SH_H
-# include <stdarg.h>
+#include <libft.h>
 
-int		allfree(int nb, ...);
-#endif
+void	ft_putendl_fd(char const *s, int fd)
+{
+	if (s)
+	{
+		while (*s)
+			ft_putchar_fd(*s++, fd);
+	}
+	ft_putchar_fd('\n', fd);
+}

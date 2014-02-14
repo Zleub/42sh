@@ -1,0 +1,5 @@
+letter	= [A-Za-z] ;
+space	= " " | "\t" | "\n" | "\f" | "\r" ;
+cmd		= letter, {letter} ;
+rule	= {space}, cmd ;
+grammar	= {rule} ;

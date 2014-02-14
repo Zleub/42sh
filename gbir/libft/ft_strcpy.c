@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sh.h                                               :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 00:16:09 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/13 21:36:04 by gbir             ###   ########.fr       */
+/*   Created: 2013/11/29 00:27:13 by adebray           #+#    #+#             */
+/*   Updated: 2013/12/03 00:13:50 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SH_H
-# define SH_H
-# include <stdarg.h>
+char	*ft_strcpy(char *s1, const char *s2)
+{
+	char	*p;
 
-int		allfree(int nb, ...);
-#endif
+	p = s1;
+	while (*s2 != '\0')
+	{
+		*s1++ = *s2++;
+	}
+	*s1 = '\0';
+	return (p);
+}
