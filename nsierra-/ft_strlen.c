@@ -12,9 +12,9 @@
 
 #include <stddef.h>
 
-inline size_t			ft_strlen(const char *str)
+size_t			ft_strlen(const char *str)
 {
-	const char			*keep;
+	const char	*keep;
 
 	keep = str;
 	while (*str != '\0')

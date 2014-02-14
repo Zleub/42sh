@@ -49,15 +49,21 @@ static void				print_env(const char **env)
 		printf("%s\n", *env++);
 }
 
+static void				pause_loop(void)
+{
+	while (42)
+		;
+}
+
 int						main(void)
 {
 	char				**env;
 
 	env = get_env();
-	print_env((const char **)env);
 	if (env_update_var(env, "LESS", "Guefrooooooo") < 0)
 		puts("Error you bitch.");
 	else
 		print_env((const char **)env);
+	pause_loop();
 	return (EXIT_SUCCESS);
 }

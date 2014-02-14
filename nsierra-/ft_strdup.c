@@ -13,7 +13,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-static inline size_t		st_strlen(const char *str)
+static size_t				st_strlen(const char *str)
 {
 	const char				*keep;
 
