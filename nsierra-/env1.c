@@ -12,6 +12,7 @@
 
 #include <stdlib.h>
 #include <stddef.h>
+#include "libft.h"
 
 char			**env_create_new(size_t size)
 {
@@ -19,7 +20,7 @@ char			**env_create_new(size_t size)
 
 	if (!(new_env = NULL) && !(new_env = malloc(sizeof(char *) * size + 1)))
 		return (NULL);
-	while (size >= 0)
+	while (size != 0)
 	{
 		new_env[size] = NULL;
 		--size;

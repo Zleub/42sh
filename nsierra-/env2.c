@@ -10,8 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include "libft.h"
 #include "env.h"
 
+/*
+** Generates a string of the form var + del + value.
+** For instance, if the function recieves :
+**		- var = PATH ;
+**		- value = /usr/bin ;
+**		- del = '=' ;
+** the resulting string will be "PATH=/usr/bin"
+*/
 static char		*gen_var(const char *var, const char *value, const char del)
 {
 	int			new_var_size;
@@ -37,6 +47,7 @@ static char		*gen_var(const char *var, const char *value, const char del)
 	*new_var = '\0';
 	return (keep);
 }
+
 /*
 ** Creates a new env, copies the old one into it and adds the couple var + val
 ** at the end of the array. On successfull, returns a pointer to the new env
@@ -49,16 +60,18 @@ char			**env_add_var(char **env, const char *var, const char *value)
 	char		*new_var;
 	int			old_env_size;
 
-	old_env_size = env_get_size(env);
-	if (!(new_env = NULL)
-		&& (!(new_env = env_create_new(old_env_size + 1)))
-		|| !env_copy(env, new_env) || !(new_var = gen_var(var, value, '=')))
+	new_var = NULL;
+	old_env_size = env_get_size((const char **)env);
+	if (!(new_env = env_create_new(old_env_size + 1))
+		|| !env_copy((const char **)env, new_env)
+		|| !(new_var = gen_var(var, value, '='))))
 		return (NULL);
 	new_env[old_env_size] = new_var;
 	new_env[old_env_size + 1] = NULL;
 	env_destroy(env);
 	return (new_env);
 }
+
 /*
 ** Looks for the index of the variable specified by var into env. On
 ** successfull, frees the old variable, sets a new couple var + val at

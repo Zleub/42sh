@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsierra- <nsierra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/14 11:28:34 by nsierra-          #+#    #+#             */
-/*   Updated: 2014/02/14 11:29:42 by nsierra-         ###   ########.fr       */
+/*   Created: 2014/01/03 07:38:25 by nsierra-          #+#    #+#             */
+/*   Updated: 2014/01/03 07:38:29 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include <stddef.h>
 
-char			*ft_strdup(const char *str);
-size_t			ft_strlen(const char *str);
-int				ft_strncmp(const char *s1, const char *s2, size_t n);
-
-#endif /* !LIBFT_H */
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	while (*s1 == *s2 && n)
+	{
+		if (*s1 == '\0')
+			return (0);
+		--n;
+		++s1;
+		++s2;
+	}
+	if (n == 0)
+		return (0);
+	if (*s1 > *s2)
+		return (1);
+	if (*s1 < *s2)
+		return (-1);
+	return (0);
+}

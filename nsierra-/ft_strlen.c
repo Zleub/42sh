@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsierra- <nsierra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/14 11:28:34 by nsierra-          #+#    #+#             */
-/*   Updated: 2014/02/14 11:29:42 by nsierra-         ###   ########.fr       */
+/*   Created: 2014/02/01 03:54:24 by nsierra-          #+#    #+#             */
+/*   Updated: 2014/02/01 03:55:24 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include <stddef.h>
 
-char			*ft_strdup(const char *str);
-size_t			ft_strlen(const char *str);
-int				ft_strncmp(const char *s1, const char *s2, size_t n);
+inline size_t			ft_strlen(const char *str)
+{
+	const char			*keep;
 
-#endif /* !LIBFT_H */
+	keep = str;
+	while (*str != '\0')
+		++str;
+	return (str - keep);
+}
