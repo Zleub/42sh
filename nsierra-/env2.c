@@ -28,19 +28,21 @@ static char		*gen_var(const char *var, const char *value, const char del)
 	char		*new_var;
 	char		*keep;
 
-	new_var_size = 0;
-	new_var_size += ft_strlen(var) + ft_strlen(value) + 1;
+	new_var_size = 1;
+	if (var)
+		new_var_size += ft_strlen(var);
+	if (value)
+		new_var_size += ft_strlen(value);
 	if (!(new_var = malloc(sizeof(char) * new_var_size + 1)))
 		return (NULL);
 	keep = new_var;
-	while (*var != '\0')
+	while (var && *var != '\0')
 	{
 		*new_var = *var++;
 		++new_var;
 	}
-	*new_var = del;
-	++new_var;
-	while (*value != '\0')
+	*new_var++ = del;
+	while (value && *value != '\0')
 	{
 		*new_var = *value++;
 		++new_var;
