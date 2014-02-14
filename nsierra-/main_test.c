@@ -55,12 +55,14 @@ static void				pause_loop(void)
 		;
 }
 
+/* char			**env_add_var(char **env, const char *var, const char *value) */
+
 int						main(void)
 {
 	char				**env;
 
 	env = get_env();
-	if (env_update_var(env, "LESS", NULL) < 0)
+	if (env_update_var(env, NULL, NULL) < 0)
 		puts("Error you bitch.");
 	else
 		print_env((const char **)env);

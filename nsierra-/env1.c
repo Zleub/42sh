@@ -33,8 +33,11 @@ size_t			env_get_size(const char **env)
 	size_t		size;
 
 	size = 0;
-	while (env[size] != NULL)
-		++size;
+	if (env)
+	{
+		while (env[size] != NULL)
+			++size;	
+	}
 	return (size);
 }
 

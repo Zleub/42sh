@@ -86,7 +86,7 @@ int				env_update_var(char **env, const char *var, const char *value)
 	char		*new_var;
 	int			var_index;
 
-	if ((var_index = env_is_set((const char **)env, var)) < 0
+	if (!var || (var_index = env_is_set((const char **)env, var)) < 0
 		|| !(new_var = gen_var(var, value, '=')))
 		return (-1);
 	free(env[var_index]);
