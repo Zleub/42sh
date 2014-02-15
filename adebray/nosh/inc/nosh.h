@@ -6,7 +6,7 @@
 /*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 21:41:20 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/14 23:13:52 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/15 06:50:49 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 # include <gnl.h>
 # include <term.h>
 
-typedef struct		s_gnl
+typedef struct		s_clist
 {
 	char			c;
-	struct s_gnl	*next;
-}					t_gnl;
+	struct s_clist	*next;
+}					t_clist;
 
 int		ft_putschar(int c);
 

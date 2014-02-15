@@ -6,7 +6,7 @@
 /*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/15 06:14:20 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/15 07:12:20 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int							tswitch(int i)
 	}
 }
 
-void				print_gnl(t_gnl *head)
+void				print_clist(t_clist *head)
 {
 	while (head->next)
 	{
@@ -45,23 +45,34 @@ void				print_gnl(t_gnl *head)
 	// ft_printf("\n");
 }
 
-t_gnl				*create_gnl(void)
+t_clist				*create_clist(void)
 {
-	t_gnl			*gnl;
+	t_clist			*gnl;
 
-	gnl = (t_gnl*)malloc(sizeof(t_gnl));
+	gnl = (t_clist*)malloc(sizeof(t_clist));
 	gnl->c = -1;
 	gnl->next = NULL;
 	return (gnl);
 }
 
+void				free_clist(t_clist *elem)
+{
+	if (elem->next)
+		free_clist(elem->next);
+	if (elem)
+	{
+		free(elem);
+		elem = NULL;
+	}
+}
+
 int					line_edition(void)
 {
 	char			buf[5] = {0};
-	t_gnl			*tmp;
-	t_gnl			*head;
+	t_clist			*tmp;
+	t_clist			*head;
 
-	tmp = create_gnl();
+	tmp = create_clist();
 	head = tmp;
 	tputs(tgetstr("sc", NULL), 1, ft_putschar);
 	while (read(0, buf, 4) > 0)
@@ -69,19 +80,22 @@ int					line_edition(void)
 		if (0 <= buf[0] && buf[1] == '\0')
 		{
 			if (buf[0] == 10)
+			{
+				free_clist(head);
 				return (0);
+			}
 			tmp->c = buf[0];
-			tmp->next = create_gnl();
+			tmp->next = create_clist();
 			tmp = tmp->next;
 		}
 		else
 		{
 			ft_printf("%s\tYou wrote : '%d.%d.%d.%d.%d'\n", buf, buf[0], buf[1], buf[2], buf[3], buf[4]);
-			// print_gnl(head);
+			// print_clist(head);
 		}
 		tputs(tgetstr("rc", NULL), 1, ft_putschar);
 
-		print_gnl(head);
+		print_clist(head);
 		ft_strclr(buf);
 
 	}
@@ -92,9 +106,10 @@ int					no_sh(void)
 {
 	while (42)
 	{
-		tputs(tgetstr("cr", NULL), 1, ft_putschar);
-		tputs(tgetstr("dl", NULL), 1, ft_putschar);
+		// tputs(tgetstr("cr", NULL), 1, ft_putschar);
+	// 	tputs(tgetstr("dl", NULL), 1, ft_putschar);
 		line_edition();
+		ft_printf("\n");
 	}
 	return (0);
 }
