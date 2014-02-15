@@ -65,7 +65,7 @@ char			**env_add_var(char **env, const char *var, const char *value)
 
 	new_var = NULL;
 	old_env_size = env_get_size((const char **)env);
-	if (!(new_env = env_create_new(old_env_size + 1))
+	if (!var || !(new_env = env_create_new(old_env_size + 1))
 		|| !env_copy((const char **)env, new_env)
 		|| !(new_var = gen_var(var, value, '=')))
 		return (NULL);
@@ -86,7 +86,7 @@ int				env_update_var(char **env, const char *var, const char *value)
 	char		*new_var;
 	int			var_index;
 
-	if (!var || (var_index = env_is_set((const char **)env, var)) < 0
+	if (!var || !env || (var_index = env_is_set((const char **)env, var)) < 0
 		|| !(new_var = gen_var(var, value, '=')))
 		return (-1);
 	free(env[var_index]);

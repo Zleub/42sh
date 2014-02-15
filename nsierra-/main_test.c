@@ -17,6 +17,9 @@
 ** libc we're not allowed to use, such as printf() (yeak), strdup() and fml().
 */
 
+#define TEST_UPDATE
+/*#define TEST_ADD*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -62,10 +65,17 @@ int						main(void)
 	char				**env;
 
 	env = get_env();
-	if (env_update_var(env, NULL, NULL) < 0)
+
+#ifdef TEST_UPDATE
+	if (env_update_var(NULL, "LESS", NULL) < 0)
 		puts("Error you bitch.");
 	else
 		print_env((const char **)env);
+#endif /* !TEST_UPDATE */
+
+#ifdef TEST_ADD
+	if (!env_add_var(env, ))
+#endif /* !TEST_ADD */
 	pause_loop();
 	return (EXIT_SUCCESS);
 }
