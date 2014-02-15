@@ -66,7 +66,7 @@ char			**env_add_var(char **env, const char *var, const char *value)
 
 	new_var = NULL;
 	old_env_size = env_get_size((const char **)env);
-	if (!var || !(new_env = env_create_new(old_env_size + 1))
+	if (!(new_env = env_create_new(old_env_size + 1))
 		|| !(new_env = env_copy((const char **)env, new_env))
 		|| !(new_var = gen_var(var, value, '=')))
 		return (NULL);

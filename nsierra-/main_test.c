@@ -74,13 +74,10 @@ int						main(void)
 #endif /* !TEST_UPDATE */
 
 #ifdef TEST_ADD
-	if (!(env = env_add_var(env, "TEST", "Ca marche, c'est genial.")))
+	if (!(env = env_add_var(env, NULL, NULL)))
 		puts("Error you bitch.");
 	else
-	{
-		puts("ET LA");
 		print_env((const char **)env);
-	}
 #endif /* !TEST_ADD */
 	env_destroy(env);
 	pause_loop();

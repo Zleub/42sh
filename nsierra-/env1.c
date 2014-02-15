@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
 #include "libft.h"
@@ -42,12 +41,6 @@ size_t			env_get_size(const char **env)
 	return (size);
 }
 
-static void				print_env(const char **env)
-{
-	while (*env)
-		printf("%s\n", *env++);
-}
-
 char			**env_copy(const char **src, char **dst)
 {
 	static int	i = 0;
@@ -74,8 +67,6 @@ char			**env_copy(const char **src, char **dst)
 	}
 	dst[i] = NULL;
 	i = 0;
-	puts("LA");
-	print_env((const char **)dst);
 	return (dst);
 }
 
