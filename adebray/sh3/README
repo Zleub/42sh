@@ -3,5 +3,3 @@ Private workshop
 Binary Tree from BNF syntaxe
 
 ./ft_sh3 | grep 'tree->str' && ./ft_sh3 | grep '<'
-
-test
