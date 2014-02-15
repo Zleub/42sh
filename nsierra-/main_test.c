@@ -17,12 +17,13 @@
 ** libc we're not allowed to use, such as printf() (yeak), strdup() and fml().
 */
 
-#define TEST_UPDATE
-/*#define TEST_ADD*/
+/*#define TEST_UPDATE*/
+#define TEST_ADD
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 #include "env.h"
 
 static char				**get_env(void)
@@ -40,7 +41,7 @@ static char				**get_env(void)
 	i = 0;
 	while (environ[i] != NULL)
 	{
-		new_env[i] = strdup(environ[i]);
+		new_env[i] = ft_strdup(environ[i]);
 		++i;
 	}
 	return (new_env);
@@ -65,7 +66,6 @@ int						main(void)
 	char				**env;
 
 	env = get_env();
-
 #ifdef TEST_UPDATE
 	if (env_update_var(NULL, "LESS", NULL) < 0)
 		puts("Error you bitch.");
@@ -74,8 +74,15 @@ int						main(void)
 #endif /* !TEST_UPDATE */
 
 #ifdef TEST_ADD
-	if (!env_add_var(env, ))
+	if (!(env = env_add_var(env, "TEST", "Ca marche, c'est genial.")))
+		puts("Error you bitch.");
+	else
+	{
+		puts("ET LA");
+		print_env((const char **)env);
+	}
 #endif /* !TEST_ADD */
+	env_destroy(env);
 	pause_loop();
 	return (EXIT_SUCCESS);
 }

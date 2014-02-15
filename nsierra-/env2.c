@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 #include "env.h"
@@ -66,7 +67,7 @@ char			**env_add_var(char **env, const char *var, const char *value)
 	new_var = NULL;
 	old_env_size = env_get_size((const char **)env);
 	if (!var || !(new_env = env_create_new(old_env_size + 1))
-		|| !env_copy((const char **)env, new_env)
+		|| !(new_env = env_copy((const char **)env, new_env))
 		|| !(new_var = gen_var(var, value, '=')))
 		return (NULL);
 	new_env[old_env_size] = new_var;

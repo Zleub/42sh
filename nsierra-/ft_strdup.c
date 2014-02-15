@@ -29,8 +29,10 @@ char						*ft_strdup(const char *str)
 	char					*new_str;
 	char					*keep;
 
+	new_str = NULL;
 	len = st_strlen(str);
-	new_str = malloc(sizeof(char) * len + 1);
+	if (!(new_str = malloc(sizeof(char) * len + 1)))
+		return (NULL);
 	keep = new_str;
 	while (*str != '\0')
 	{
