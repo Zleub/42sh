@@ -1,3 +1,11 @@
 nosh
 
+esc to exit
+
 env -i, done
+no leaks, done
+enter, done
+backspace, done
+up/down,
+left/right,
+fork/execve,

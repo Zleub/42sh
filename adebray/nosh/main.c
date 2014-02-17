@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/15 07:12:20 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/17 17:16:29 by Arno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int							tswitch(int i)
 
 void				print_clist(t_clist *head)
 {
+	if (!head)
+		return ;
 	while (head->next)
 	{
 		ft_printf("%c", head->c);
@@ -52,6 +54,7 @@ t_clist				*create_clist(void)
 	gnl = (t_clist*)malloc(sizeof(t_clist));
 	gnl->c = -1;
 	gnl->next = NULL;
+	gnl->prev = NULL;
 	return (gnl);
 }
 
@@ -74,7 +77,7 @@ int					line_edition(void)
 
 	tmp = create_clist();
 	head = tmp;
-	tputs(tgetstr("sc", NULL), 1, ft_putschar);
+	// tputs(tgetstr("sc", NULL), 1, ft_putschar);
 	while (read(0, buf, 4) > 0)
 	{
 		if (0 <= buf[0] && buf[1] == '\0')
@@ -84,17 +87,46 @@ int					line_edition(void)
 				free_clist(head);
 				return (0);
 			}
-			tmp->c = buf[0];
-			tmp->next = create_clist();
-			tmp = tmp->next;
+			else if (buf[0] == 127)
+			{
+				if (tmp->prev)
+				{
+					if (tmp->prev->prev)
+					{
+						t_clist *todel;
+						todel = tmp->prev;
+						tmp->prev->prev->next = tmp;
+						tmp->prev = tmp->prev->prev;
+						free (todel);
+					}
+					else if (tmp->prev)
+					{
+						free (tmp->prev);
+						tmp->prev = NULL;
+						head = tmp;
+					}
+					else
+						;
+				}
+			}
+			else if (buf[0] == 27)
+			{
+				return (-1);
+			}
+			else
+			{
+				tmp->c = buf[0];
+				tmp->next = create_clist();
+				tmp->next->prev = tmp;
+				tmp = tmp->next;
+			}
 		}
 		else
-		{
-			ft_printf("%s\tYou wrote : '%d.%d.%d.%d.%d'\n", buf, buf[0], buf[1], buf[2], buf[3], buf[4]);
-			// print_clist(head);
-		}
-		tputs(tgetstr("rc", NULL), 1, ft_putschar);
-
+			;
+		// ft_printf("%s\tYou wrote : '%d.%d.%d.%d.%d'\n", buf, buf[0], buf[1], buf[2], buf[3], buf[4]);
+		// tputs(tgetstr("rc", NULL), 1, ft_putschar);
+		tputs(tgetstr("cr", NULL), 1, ft_putschar);
+		tputs(tgetstr("dl", NULL), 1, ft_putschar);
 		print_clist(head);
 		ft_strclr(buf);
 
@@ -106,15 +138,12 @@ int					no_sh(void)
 {
 	while (42)
 	{
-		// tputs(tgetstr("cr", NULL), 1, ft_putschar);
-	// 	tputs(tgetstr("dl", NULL), 1, ft_putschar);
-		line_edition();
+		if (line_edition() == -1)
+			return (0);
 		ft_printf("\n");
 	}
 	return (0);
 }
-
-#include <sys/ioctl.h>
 
 int					main(int argc, char** argv, char **environ)
 {
