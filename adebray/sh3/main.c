@@ -224,14 +224,14 @@ t_tree		*fd_to_tree(int fd)
 		free (tmp);
 		tmp = NULL;
 	}
-	return (bag->tree);
+	return (bag->tree_head);
 }
 
 int			main(void)
 {
 	int		fd;
 
-	if ((fd = open("test.gmr", O_RDONLY)) < 0)
+	if ((fd = open("test2.gmr", O_RDONLY)) < 0)
 		return (-1);
 	print_tree(fd_to_tree(fd), 0);
 	return (0);

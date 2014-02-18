@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/17 17:16:29 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/18 11:22:32 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,18 @@ void				free_clist(t_clist *elem)
 	}
 }
 
+#include <stdio.h>
+
 int					line_edition(void)
 {
 	char			buf[5] = {0};
 	t_clist			*tmp;
 	t_clist			*head;
+	int				cmp;
 
 	tmp = create_clist();
 	head = tmp;
+	cmp = ft_strlen("prompt ->");
 	// tputs(tgetstr("sc", NULL), 1, ft_putschar);
 	while (read(0, buf, 4) > 0)
 	{
@@ -105,29 +109,80 @@ int					line_edition(void)
 						tmp->prev = NULL;
 						head = tmp;
 					}
-					else
-						;
 				}
 			}
 			else if (buf[0] == 27)
 			{
+				ft_printf("\n");
 				return (-1);
 			}
 			else
 			{
+				if (buf[0] == 9) /* horizontale tabulation */
+				{
+					if (cmp % 8 != 0)
+						while (cmp % 8 != 0)
+							cmp += 1;
+					else
+						cmp += 8;
+				}
+				else
+					cmp += 1;
 				tmp->c = buf[0];
 				tmp->next = create_clist();
 				tmp->next->prev = tmp;
 				tmp = tmp->next;
 			}
 		}
-		else
-			;
+
+		dprintf(3, "-> PRITN 1\n");
+		// sleep(1);
+
 		// ft_printf("%s\tYou wrote : '%d.%d.%d.%d.%d'\n", buf, buf[0], buf[1], buf[2], buf[3], buf[4]);
 		// tputs(tgetstr("rc", NULL), 1, ft_putschar);
-		tputs(tgetstr("cr", NULL), 1, ft_putschar);
-		tputs(tgetstr("dl", NULL), 1, ft_putschar);
+		tputs(tgetstr("cr", NULL), 1, ft_putschar); /* begin of line */
+		dprintf(3, "PRITN 2\n");
+		// sleep(1);
+		int col_size;
+		int tmp;
+		dprintf(3, "cmp list : %d\n", cmp);
+
+
+		col_size =  tgetnum("co");
+		tmp = 0;
+		dprintf(3, "PRITN 3\n");
+		dprintf(3, "cmp + propmt: %d col_size : %d\n", cmp, col_size);
+		if (cmp > col_size)
+		{
+					dprintf(3, "PRITN 4\n");
+							// sleep(1);
+
+			tmp = cmp / col_size;
+			dprintf(3, "\n tmp %d \n", tmp);
+			while (tmp-- > 0)
+			{
+				dprintf(3, "PRITN 5\n");
+							sleep(1);
+				// ft_printf("test 1\n");
+				tputs(tgetstr("up", NULL), 1, ft_putschar); /* up cursor */
+			}
+			tmp = cmp / col_size;
+			while (tmp-- > 0)
+			{
+						dprintf(3, "PRITN 5\n");
+						sleep(1);
+				// ft_printf("test 2\n");
+				tputs(tgetstr("dl", NULL), 1, ft_putschar); /* clear line */
+			}
+		}
+				// tputs(tgetstr("dl", NULL), 1, ft_putschar); /* clear line */
+		dprintf(3, "PRITN 6\n");
+						sleep(1);
+
+		ft_printf("prompt ->");
+
 		print_clist(head);
+		// ft_printf("\n%d", cmp / col_size);
 		ft_strclr(buf);
 
 	}
@@ -136,8 +191,10 @@ int					line_edition(void)
 
 int					no_sh(void)
 {
+	ft_printf("prompt ->");
 	while (42)
 	{
+		// ft_printf("prompt ->");
 		if (line_edition() == -1)
 			return (0);
 		ft_printf("\n");
@@ -145,10 +202,14 @@ int					no_sh(void)
 	return (0);
 }
 
+	#include <fcntl.h>
+
 int					main(int argc, char** argv, char **environ)
 {
 	(void)argc;
 	(void)argv;
+
+	open("dump", O_CREAT | O_TRUNC | O_WRONLY, 00755);
 	if (!*environ)
 	{
 		ft_printf("Go get urself an env mtherfucker\n");

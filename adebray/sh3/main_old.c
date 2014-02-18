@@ -6,7 +6,7 @@
 /*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/02 11:12:01 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/15 00:02:12 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/17 22:00:21 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,7 +231,7 @@ int			main(void)
 {
 	int		fd;
 
-	if ((fd = open("test.gmr", O_RDONLY)) < 0)
+	if ((fd = open("test2.gmr", O_RDONLY)) < 0)
 		return (-1);
 	print_tree(fd_to_tree(fd), 0);
 	return (0);
