@@ -6,7 +6,7 @@
 /*   By: nsierra- <nsierra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 11:01:06 by nsierra-          #+#    #+#             */
-/*   Updated: 2014/02/14 11:28:13 by nsierra-         ###   ########.fr       */
+/*   Updated: 2014/02/18 04:38:48 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ int				env_is_set(const char **env, const char *var)
 	i = 0;
 	while (env[i] != NULL)
 	{
-		if (!ft_strncmp(var, env[i], ft_strlen(var)))
+		if (!ft_strncmp(var, env[i], ft_strlen(var))
+				&& env[i][ft_strlen(var)] == '=')
 			return (i);
 		++i;
 	}
