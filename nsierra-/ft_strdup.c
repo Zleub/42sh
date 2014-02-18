@@ -18,8 +18,11 @@ static size_t				st_strlen(const char *str)
 	const char				*keep;
 
 	keep = str;
-	while (*str != '\0')
-		++str;
+	if (str)
+	{
+		while (*str != '\0')
+			++str;
+	}
 	return (str - keep);
 }
 
@@ -34,11 +37,14 @@ char						*ft_strdup(const char *str)
 	if (!(new_str = malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	keep = new_str;
-	while (*str != '\0')
+	if (str)
 	{
-		*new_str = *str;
-		++str;
-		++new_str;
+		while (*str != '\0')
+		{
+			*new_str = *str;
+			++str;
+			++new_str;
+		}
 	}
 	*new_str = '\0';
 	return (keep);

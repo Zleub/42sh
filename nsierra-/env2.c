@@ -52,6 +52,15 @@ static char		*gen_var(const char *var, const char *value, const char del)
 	return (keep);
 }
 
+void			env_print(const char **env)
+{
+	if (env)
+	{
+		while (*env)
+			ft_putendl(*env++);
+	}
+}
+
 /*
 ** Creates a new env, copies the old one into it and adds the couple var + val
 ** at the end of the array. On successfull, returns a pointer to the new env

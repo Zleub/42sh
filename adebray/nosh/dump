@@ -1,0 +1,408 @@
+-> PRITN 1
+PRITN 2
+cmp list : 16
+PRITN 3
+cmp + propmt: 16 col_size : 33
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 24
+PRITN 3
+cmp + propmt: 24 col_size : 33
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 32
+PRITN 3
+cmp + propmt: 32 col_size : 33
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 33
+PRITN 3
+cmp + propmt: 33 col_size : 33
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 34
+PRITN 3
+cmp + propmt: 34 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 40
+PRITN 3
+cmp + propmt: 40 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 48
+PRITN 3
+cmp + propmt: 48 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 56
+PRITN 3
+cmp + propmt: 56 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 64
+PRITN 3
+cmp + propmt: 64 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 65
+PRITN 3
+cmp + propmt: 65 col_size : 33
+PRITN 4
+
+ tmp 1 
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 66
+PRITN 3
+cmp + propmt: 66 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 67
+PRITN 3
+cmp + propmt: 67 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 68
+PRITN 3
+cmp + propmt: 68 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 72
+PRITN 3
+cmp + propmt: 72 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 80
+PRITN 3
+cmp + propmt: 80 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 88
+PRITN 3
+cmp + propmt: 88 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 96
+PRITN 3
+cmp + propmt: 96 col_size : 33
+PRITN 4
+
+ tmp 2 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 104
+PRITN 3
+cmp + propmt: 104 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 105
+PRITN 3
+cmp + propmt: 105 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 106
+PRITN 3
+cmp + propmt: 106 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 107
+PRITN 3
+cmp + propmt: 107 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 108
+PRITN 3
+cmp + propmt: 108 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 109
+PRITN 3
+cmp + propmt: 109 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 110
+PRITN 3
+cmp + propmt: 110 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 111
+PRITN 3
+cmp + propmt: 111 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 112
+PRITN 3
+cmp + propmt: 112 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 120
+PRITN 3
+cmp + propmt: 120 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 128
+PRITN 3
+cmp + propmt: 128 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 129
+PRITN 3
+cmp + propmt: 129 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 130
+PRITN 3
+cmp + propmt: 130 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 131
+PRITN 3
+cmp + propmt: 131 col_size : 33
+PRITN 4
+
+ tmp 3 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6
+-> PRITN 1
+PRITN 2
+cmp list : 132
+PRITN 3
+cmp + propmt: 132 col_size : 33
+PRITN 4
+
+ tmp 4 
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 5
+PRITN 6

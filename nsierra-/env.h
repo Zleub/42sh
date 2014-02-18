@@ -12,6 +12,7 @@
 
 #ifndef ENV_H
 # define ENV_H
+# include <stddef.h>
 
 /*
 ** Specify a size and returns a char ** filled with NULL of size + 1.
@@ -47,5 +48,6 @@ char			**env_add_var(char **env, const char *var, const char *value);
 */
 int				env_update_var(char **env, const char *var, const char *value);
 void			env_destroy(char **env);
+void			env_print(const char **env);
 
 #endif /* !ENV_H */

@@ -6,7 +6,7 @@
 /*   By: nsierra- <nsierra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 10:28:59 by nsierra-          #+#    #+#             */
-/*   Updated: 2014/02/14 10:29:59 by nsierra-         ###   ########.fr       */
+/*   Updated: 2014/02/18 05:26:21 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,20 @@
 ** This file is not meant to be included in the project. It's there for testing
 ** purposes only. Therefore you'll find some of the horrific functions from
 ** libc we're not allowed to use, such as printf() (yeak), strdup() and fml().
+**
+**
+** In order to test UNSETENV, you must strdup every single string in the array,
+** because the function modifies the string passed as argument. If you don't
+** strdup, it will result as a bus error, but it's normal.
 */
 
-/*#define TEST_UPDATE*/
-#define TEST_ADD
+#define TEST_SETENV
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
+#include "42sh.h"
 #include "env.h"
 
 static char				**get_env(void)
@@ -47,39 +52,28 @@ static char				**get_env(void)
 	return (new_env);
 }
 
-static void				print_env(const char **env)
-{
-	while (*env)
-		printf("%s\n", *env++);
-}
-
 static void				pause_loop(void)
 {
 	while (42)
 		;
 }
 
-/* char			**env_add_var(char **env, const char *var, const char *value) */
-
 int						main(void)
 {
-	char				**env;
+	t_env				e;
+	char				*args_1[4] = {"setenv", "PATH", "/usr/bin", NULL};
+	char				*args_2[4] = {"setenv", "CACA", "kokoooo", NULL};
+	char				*args_3[5] = {NULL, NULL, NULL, NULL, NULL};
 
-	env = get_env();
-#ifdef TEST_UPDATE
-	if (env_update_var(NULL, "LESS", NULL) < 0)
-		puts("Error you bitch.");
-	else
-		print_env((const char **)env);
-#endif /* !TEST_UPDATE */
-
-#ifdef TEST_ADD
-	if (!(env = env_add_var(env, NULL, NULL)))
-		puts("Error you bitch.");
-	else
-		print_env((const char **)env);
-#endif /* !TEST_ADD */
-	env_destroy(env);
+	e.env = get_env();
+	e.path = NULL;
+	builtin_setenv(&e, args_1);
+	builtin_setenv(&e, args_2);
+	env_print((const char **)e.env);
+	puts("\n\n==========================================================\n\n");
+	builtin_unsetenv(&e, args_3);
+	env_print((const char **)e.env);
+	env_destroy(e.env);
 	pause_loop();
 	return (EXIT_SUCCESS);
 }
