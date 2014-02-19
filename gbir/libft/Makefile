@@ -6,7 +6,7 @@
 #    By: adebray <adebray@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 11:21:22 by adebray           #+#    #+#              #
-#    Updated: 2013/11/19 16:08:21 by adebray          ###   ########.fr        #
+#    Updated: 2014/02/15 14:53:54 by gbir             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 NAME = libft.a
@@ -40,6 +40,7 @@ SRC = 	ft_memset.c \
 	ft_isascii.c \
 	ft_isprint.c \
 	ft_tolower.c \
+	ft_iswhispa.c \
 	ft_toupper.c \
 	ft_memalloc.c \
 	ft_memdel.c \

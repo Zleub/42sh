@@ -6,7 +6,7 @@
 /*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 00:03:36 by adebray           #+#    #+#             */
-/*   Updated: 2014/01/12 18:18:21 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/15 14:52:44 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int			ft_isalpha(int c);
 int			ft_isascii(int c);
 int			ft_isdigit(int c);
 int			ft_isprint(int c);
+int			ft_iswhispa(char c);
 char		*ft_itoa(int n);
 void		*ft_memalloc(size_t size);
 void		*ft_memccpy(void *s1, const void *s2, int c, size_t n);

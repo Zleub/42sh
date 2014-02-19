@@ -1,5 +1,6 @@
 letter	= [A-Za-z] ;
 space	= " " | "\t" | "\n" | "\f" | "\r" ;
+#Comment
 cmd		= letter, {letter} ;
 rule	= {space}, cmd ;
-grammar	= {rule} ;
+main	= {rule} ;

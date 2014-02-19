@@ -6,32 +6,59 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 00:25:40 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/14 19:33:00 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/17 22:36:16 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LEXER_H
 # define LEXER_H
+# include <stdio.h> //supr
+
+typedef struct	s_lx_rule t_lx_rule;
+typedef struct	s_lx_arg t_lx_arg;
 
 /*
-** Struct for regular expression
-** exp: [expression]
+** Struct for general args
+** type
+**  1  = "string"
+**  2  = [expression]
+**  3  = rule
+**  4  = {rule}			(loop)
 */
-typedef struct		s_lx_exp
+struct			s_lx_arg
 {
-	char			first;
-	char			last;
-	struct s_lx_exp	next;
-}					t_lx_exp;
+	char		*s1;
+	char		*s2;
+	t_lx_rule	*rule;
+	int			type;
+	t_lx_arg	*next;
+};
 
 /*
-** Struct for string
-** exp: "string"
+** first arg and link of the last line
 */
-typedef struct		s_lx_str
+struct			s_lx_rule
 {
-	char			*str;
-	struct s_lx_str	next;
-}					t_lx_str;
+	t_lx_arg	*first;
+	t_lx_rule	*next;
+};
+
+/*
+** save a link of args and key of all line
+*/
+typedef struct			s_lx_line
+{
+	char				*key;
+	char				*arg;
+	struct s_lx_line	*next;
+}						t_lx_line;
+
+t_lx_rule	*lx_pars_lexerfile(char *cur);
+char		*lx_supr_line(char *line);
+t_lx_rule	*lx_pa_translate(t_lx_line *line);
+int			lx_pa_isspe(int *spe, char c);
+t_lx_arg	*lx_pa_argstr(char **tmp);
+t_lx_arg	*lx_pa_argexp(char **tmp);
+t_lx_arg	*lx_pa_argrule(char **tmp, char *key);
 
 #endif

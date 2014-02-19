@@ -3,32 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/04 17:16:12 by adebray           #+#    #+#             */
-/*   Updated: 2013/12/04 17:16:24 by adebray          ###   ########.fr       */
+/*   Created: 2014/01/17 17:13:08 by gbir              #+#    #+#             */
+/*   Updated: 2014/02/15 14:56:06 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static int	st_strlen(const char *s)
 {
-	char	*tmp;
-	char	*ptr;
+	char	*save;
 
-	if (s1 != NULL && s2 != NULL)
+	save = (char*)s;
+	while (*save != '\0')
+		++save;
+	return (save - s);
+}
+
+char		*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*s;
+	char	*cur;
+	int		n;
+
+	if (s1 && s2)
 	{
-		tmp = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-		if (!tmp)
-			return (NULL);
-		ptr = tmp;
-		while (*s1)
-			*tmp++ = *s1++;
-		while (*s2)
-			*tmp++ = *s2++;
-		*tmp = '\0';
-		return (ptr);
+		n = st_strlen(s1) + st_strlen(s2);
+		s = (char*)malloc(sizeof(char) * (n + 1));
+		cur = s;
+		if (s != NULL)
+		{
+			while (*s1 && n--)
+				*cur++ = *s1++;
+			while (*s2 && n--)
+				*cur++ = *s2++;
+			*cur = '\0';
+			return (s);
+		}
 	}
-	return (NULL);
+	return (0);
 }

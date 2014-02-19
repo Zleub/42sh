@@ -6,13 +6,18 @@
 #    By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/15 16:18:42 by gbir              #+#    #+#              #
-#    Updated: 2014/02/13 21:36:15 by gbir             ###   ########.fr        #
+#    Updated: 2014/02/17 20:58:07 by gbir             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-NAME	=	sh
+NAME	=	42sh
 CC		=	cc
-SRCS	=	main.c		gnl.c		allfree.c
+
+S_GE	=	main.c				gnl.c				allfree.c			
+S_LX	=	lx_lexer.c			lx_pars.c			lx_pars_gen.c		\
+			lx_pa_translate.c	lx_pa_arg.c
+
+SRCS	=	$(S_GE)	$(S_LX)
 
 OBJ		=	$(SRCS:.c=.o)
 CFLAGS	=	-Wall -Werror -Wextra -O3

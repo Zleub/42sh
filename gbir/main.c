@@ -6,56 +6,28 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 00:19:38 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/14 19:22:03 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/17 12:36:19 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sh.h"
-#include "gnl.h"
+#include "lexer.h"
 #include "libft.h"
 #include <fcntl.h>
-
-void	lx_lexer()
-{
-
-}
-
-void	lx_pars_lexerfile(char *cur)
-{
-	static char	*line = NULL;
-	char		*tmp;
-	int			iscmd;
-
-	tmp = (line) ? line : cur;
-	iscmd = 0;
-	while (*tmp)
-	{
-		if (iscmd && *tmp == ' ' && *(tmp + 1) == ';')
-		{
-			ft_putendl((line) ? line : cur);//new cmd
-			free(cur);
-			if (line)
-				free(line);
-			line = NULL;
-			return ;
-		}
-		else if (*tmp == '=')
-			iscmd = 1;
-		++tmp;
-	}
-	if ((tmp = line) && (line = ft_strjoin(line, cur)))
-		allfree(2, cur, tmp);
-	else
-		line = cur;
-}
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h> //supr
 
 int		main(void)
 {
-	char	*tmp;
-	int		fd;
+	char		tmp[1025];
+	char		*file;
+	int			fd;
 
+	file = malloc(sizeof(char));
+	*file = 0;
 	fd = open("lexer.gmr", O_RDONLY);
-	while (get_next_line(fd, &tmp) > 0)
-		lx_pars_lexerfile(tmp);
+	while (read(fd, &tmp, 1024) > 0)
+		file = ft_strjoin(file, tmp);
+	lx_pars_lexerfile(file);
 	return (0);
 }
