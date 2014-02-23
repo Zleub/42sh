@@ -6,7 +6,7 @@
 #    By: adebray <adebray@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/16 20:25:00 by adebray           #+#    #+#              #
-#    Updated: 2014/02/14 23:13:30 by adebray          ###   ########.fr        #
+#    Updated: 2014/02/23 02:10:15 by adebray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME		= nosh
@@ -17,7 +17,9 @@ PRINTF		= ./src/ft_printf/libftprintf.a
 SRCDIR		= ./src/
 HEADDIR		= ./inc/
 
-SRC			=	./src/gnl.c		./src/ft_putschar.c
+SRC			=	./src/gnl.c				\
+				./src/ft_putschar.c		\
+				./src/t_clist.c
 
 OBJ			= $(subst .c,.o,$(SRC))
 

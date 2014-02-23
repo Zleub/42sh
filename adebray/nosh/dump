@@ -1,0 +1,198 @@
+tmp 0 | cmp 9 | col_size 87 | cmp % col_size 9
+tmp 0 | cmp 10 | col_size 87 | cmp % col_size 10
+tmp 0 | cmp 11 | col_size 87 | cmp % col_size 11
+tmp 0 | cmp 12 | col_size 87 | cmp % col_size 12
+tmp 0 | cmp 13 | col_size 87 | cmp % col_size 13
+tmp 0 | cmp 14 | col_size 87 | cmp % col_size 14
+tmp 0 | cmp 15 | col_size 87 | cmp % col_size 15
+tmp 0 | cmp 16 | col_size 87 | cmp % col_size 16
+tmp 0 | cmp 17 | col_size 87 | cmp % col_size 17
+tmp 0 | cmp 18 | col_size 87 | cmp % col_size 18
+tmp 0 | cmp 19 | col_size 87 | cmp % col_size 19
+tmp 0 | cmp 20 | col_size 87 | cmp % col_size 20
+tmp 0 | cmp 21 | col_size 87 | cmp % col_size 21
+tmp 0 | cmp 22 | col_size 87 | cmp % col_size 22
+tmp 0 | cmp 23 | col_size 87 | cmp % col_size 23
+tmp 0 | cmp 24 | col_size 87 | cmp % col_size 24
+tmp 0 | cmp 25 | col_size 87 | cmp % col_size 25
+tmp 0 | cmp 26 | col_size 87 | cmp % col_size 26
+tmp 0 | cmp 27 | col_size 87 | cmp % col_size 27
+tmp 0 | cmp 28 | col_size 87 | cmp % col_size 28
+tmp 0 | cmp 29 | col_size 87 | cmp % col_size 29
+tmp 0 | cmp 30 | col_size 87 | cmp % col_size 30
+tmp 0 | cmp 31 | col_size 87 | cmp % col_size 31
+tmp 0 | cmp 32 | col_size 87 | cmp % col_size 32
+tmp 0 | cmp 33 | col_size 87 | cmp % col_size 33
+tmp 0 | cmp 34 | col_size 87 | cmp % col_size 34
+tmp 0 | cmp 35 | col_size 87 | cmp % col_size 35
+tmp 0 | cmp 36 | col_size 87 | cmp % col_size 36
+tmp 0 | cmp 37 | col_size 87 | cmp % col_size 37
+tmp 0 | cmp 38 | col_size 87 | cmp % col_size 38
+tmp 0 | cmp 39 | col_size 87 | cmp % col_size 39
+tmp 0 | cmp 40 | col_size 87 | cmp % col_size 40
+tmp 0 | cmp 41 | col_size 87 | cmp % col_size 41
+tmp 0 | cmp 42 | col_size 87 | cmp % col_size 42
+tmp 0 | cmp 43 | col_size 87 | cmp % col_size 43
+tmp 0 | cmp 44 | col_size 87 | cmp % col_size 44
+tmp 0 | cmp 45 | col_size 87 | cmp % col_size 45
+tmp 0 | cmp 46 | col_size 87 | cmp % col_size 46
+tmp 0 | cmp 47 | col_size 87 | cmp % col_size 47
+tmp 0 | cmp 48 | col_size 87 | cmp % col_size 48
+tmp 0 | cmp 49 | col_size 87 | cmp % col_size 49
+tmp 0 | cmp 50 | col_size 87 | cmp % col_size 50
+tmp 0 | cmp 51 | col_size 87 | cmp % col_size 51
+tmp 0 | cmp 52 | col_size 87 | cmp % col_size 52
+tmp 0 | cmp 53 | col_size 87 | cmp % col_size 53
+tmp 0 | cmp 54 | col_size 87 | cmp % col_size 54
+tmp 0 | cmp 55 | col_size 87 | cmp % col_size 55
+tmp 0 | cmp 56 | col_size 87 | cmp % col_size 56
+tmp 0 | cmp 57 | col_size 87 | cmp % col_size 57
+tmp 0 | cmp 58 | col_size 87 | cmp % col_size 58
+tmp 0 | cmp 59 | col_size 87 | cmp % col_size 59
+tmp 0 | cmp 60 | col_size 87 | cmp % col_size 60
+tmp 0 | cmp 61 | col_size 87 | cmp % col_size 61
+tmp 0 | cmp 62 | col_size 87 | cmp % col_size 62
+tmp 0 | cmp 63 | col_size 87 | cmp % col_size 63
+tmp 0 | cmp 64 | col_size 87 | cmp % col_size 64
+tmp 0 | cmp 65 | col_size 87 | cmp % col_size 65
+tmp 0 | cmp 66 | col_size 87 | cmp % col_size 66
+tmp 0 | cmp 67 | col_size 87 | cmp % col_size 67
+tmp 0 | cmp 68 | col_size 87 | cmp % col_size 68
+tmp 0 | cmp 69 | col_size 87 | cmp % col_size 69
+tmp 0 | cmp 70 | col_size 87 | cmp % col_size 70
+tmp 0 | cmp 71 | col_size 87 | cmp % col_size 71
+tmp 0 | cmp 72 | col_size 87 | cmp % col_size 72
+tmp 0 | cmp 73 | col_size 87 | cmp % col_size 73
+tmp 0 | cmp 74 | col_size 87 | cmp % col_size 74
+tmp 0 | cmp 75 | col_size 87 | cmp % col_size 75
+tmp 0 | cmp 76 | col_size 87 | cmp % col_size 76
+tmp 0 | cmp 77 | col_size 87 | cmp % col_size 77
+tmp 0 | cmp 78 | col_size 87 | cmp % col_size 78
+tmp 0 | cmp 79 | col_size 87 | cmp % col_size 79
+tmp 0 | cmp 80 | col_size 87 | cmp % col_size 80
+tmp 0 | cmp 81 | col_size 87 | cmp % col_size 81
+tmp 0 | cmp 82 | col_size 87 | cmp % col_size 82
+tmp 0 | cmp 83 | col_size 87 | cmp % col_size 83
+tmp 0 | cmp 84 | col_size 87 | cmp % col_size 84
+tmp 0 | cmp 85 | col_size 87 | cmp % col_size 85
+tmp 0 | cmp 86 | col_size 87 | cmp % col_size 86
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 92 | col_size 87 | cmp % col_size 5
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 92 | col_size 87 | cmp % col_size 5
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 86 | col_size 87 | cmp % col_size 86
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 92 | col_size 87 | cmp % col_size 5
+up
+dl
+tmp 1 | cmp 93 | col_size 87 | cmp % col_size 6
+up
+dl
+tmp 1 | cmp 94 | col_size 87 | cmp % col_size 7
+up
+dl
+tmp 1 | cmp 95 | col_size 87 | cmp % col_size 8
+up
+dl
+tmp 1 | cmp 94 | col_size 87 | cmp % col_size 7
+up
+dl
+tmp 1 | cmp 93 | col_size 87 | cmp % col_size 6
+up
+dl
+tmp 1 | cmp 92 | col_size 87 | cmp % col_size 5
+up
+dl
+tmp 1 | cmp 91 | col_size 87 | cmp % col_size 4
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 86 | col_size 87 | cmp % col_size 86
+tmp 0 | cmp 85 | col_size 87 | cmp % col_size 85
+tmp 0 | cmp 84 | col_size 87 | cmp % col_size 84
+tmp 0 | cmp 85 | col_size 87 | cmp % col_size 85
+tmp 0 | cmp 86 | col_size 87 | cmp % col_size 86
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 1 | cmp 90 | col_size 87 | cmp % col_size 3
+up
+dl
+tmp 1 | cmp 89 | col_size 87 | cmp % col_size 2
+up
+dl
+tmp 0 | cmp 88 | col_size 87 | cmp % col_size 1
+dl
+tmp 0 | cmp 87 | col_size 87 | cmp % col_size 0
+tmp 0 | cmp 86 | col_size 87 | cmp % col_size 86

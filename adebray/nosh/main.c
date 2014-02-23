@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/22 07:09:21 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/23 02:25:58 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,60 +35,12 @@ int							tswitch(int i)
 	}
 }
 
-void				print_clist(t_clist *head)
-{
-	if (!head)
-		return ;
-	while (head->next)
-	{
-		ft_printf("%c", head->c);
-		head = head->next;
-	}
-	// ft_printf("\n");
-}
-
-t_clist				*create_clist(void)
-{
-	t_clist			*gnl;
-
-	gnl = (t_clist*)malloc(sizeof(t_clist));
-	gnl->c = -1;
-	gnl->next = NULL;
-	gnl->prev = NULL;
-	return (gnl);
-}
-
-void				free_clist(t_clist *elem)
-{
-	if (elem->next)
-		free_clist(elem->next);
-	if (elem)
-	{
-		free(elem);
-		elem = NULL;
-	}
-}
-
-int					lign_nb(int cmp, int col_size)
-{
-	int		i;
-
-	i = 0;
-	while (cmp > col_size)
-	{
-		cmp -= col_size;
-		i += 1;
-	}
-	return (i);
-}
-
 void			is_backspace(t_clist *tmp, t_clist *head)
 {
 	t_clist *todel;
 
 	if (tmp->prev)
 	{
-
 		if (tmp->prev->prev)
 		{
 			todel = tmp->prev;
@@ -111,8 +63,11 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 {
 	if (buf[0] == 10) /* is \n */
 	{
+		write(1, "\n", 1);
+		ft_printf("prompt ->");
 		free_clist(head);
-		return (NULL);
+		head = create_clist();
+		return (head);
 	}
 	else if (buf[0] == 127) /* is backspace */
 		is_backspace(tmp, head);
@@ -134,6 +89,14 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 	return (tmp);
 }
 
+void			map_noascii(char *buf, t_clist *head, t_clist *tmp)
+{
+	(void)head;
+	(void)tmp;
+	ft_printf("  %d.%d.%d.%d.%d\n", buf[0], buf[1], buf[2], buf[3], buf[4]);
+	ft_printf("prompt ->");
+}
+
 int					line_edition(void)
 {
 	char			buf[5] = {0};
@@ -149,6 +112,10 @@ int					line_edition(void)
 			tmp = map_ascii(buf, head, tmp);
 			if (!tmp)
 				return (-1);
+		}
+		else
+		{
+			map_noascii(buf, head, tmp);
 		}
 		ft_strclr(buf);
 	}
