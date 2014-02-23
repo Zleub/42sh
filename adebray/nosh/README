@@ -8,4 +8,8 @@ enter, done
 backspace, done
 up/down,
 left/right,
+env,
+env security,
+malloc security,
 fork/execve,
+fork/execve security,
