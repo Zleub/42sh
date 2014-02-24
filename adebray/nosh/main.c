@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/23 02:25:58 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/24 14:23:12 by Arno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void			is_backspace(t_clist *tmp, t_clist *head)
 
 t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 {
+	t_clist		*new;
+
 	if (buf[0] == 10) /* is \n */
 	{
 		write(1, "\n", 1);
@@ -80,21 +82,58 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 		;
 	else
 	{
-		write(1, &buf[0], 1);
-		tmp->c = buf[0];
-		tmp->next = create_clist();
-		tmp->next->prev = tmp;
-		tmp = tmp->next;
+		if (tmp->c == -1)
+		{
+			write(1, &buf[0], 1);
+			tmp->c = buf[0];
+			tmp->next = create_clist();
+			tmp->next->prev = tmp;
+			tmp = tmp->next;
+		}
+		else
+		{
+			tputs(tgetstr("im", NULL), 1, ft_putschar); /* move left */
+			tputs(tgetstr("ic", NULL), 1, ft_putschar); /* move left */
+
+			write(1, &buf[0], 1);
+			tputs(tgetstr("ip", NULL), 1, ft_putschar); /* move left */
+
+			tputs(tgetstr("ei", NULL), 1, ft_putschar); /* move left */
+			new =create_clist();
+			new->c = buf[0];
+			if (tmp->prev)
+				tmp->prev->next = new;
+
+			new->prev = tmp->prev;
+			tmp->prev = new;
+			new->next = tmp;
+		}
 	}
 	return (tmp);
 }
 
-void			map_noascii(char *buf, t_clist *head, t_clist *tmp)
+t_clist			*map_noascii(char *buf, t_clist *head, t_clist *tmp)
 {
 	(void)head;
 	(void)tmp;
-	ft_printf("  %d.%d.%d.%d.%d\n", buf[0], buf[1], buf[2], buf[3], buf[4]);
-	ft_printf("prompt ->");
+	if (KEYUP)
+		ft_printf("KEY UP");
+	else if (KEYDW)
+		ft_printf("KEY DOWN");
+	else if (KEYRT)
+	{
+		tputs(tgetstr("nd", NULL), 1, ft_putschar); /* move left */
+		tmp = tmp->next;
+		return (tmp);
+	}
+	else if (KEYLF)
+	{
+		tputs(tgetstr("le", NULL), 1, ft_putschar); /* move left */
+		tmp = tmp->prev;
+		return (tmp);
+	}
+	ft_printf("\nprompt->");
+	return (tmp);
 }
 
 int					line_edition(void)
@@ -115,7 +154,7 @@ int					line_edition(void)
 		}
 		else
 		{
-			map_noascii(buf, head, tmp);
+			tmp = map_noascii(buf, head, tmp);
 		}
 		ft_strclr(buf);
 	}

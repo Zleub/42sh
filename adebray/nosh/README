@@ -1,15 +1,19 @@
 nosh
 
-esc to exit
+esc to exit					!		42sh must have
 
-env -i, done
-no leaks, done
-enter, done
-backspace, done
-up/down,
-left/right,
-env,
-env security,
-malloc security,
-fork/execve,
-fork/execve security,
+env -i, done				!		prompt, done
+no leaks, done				!		command line,
+enter, done					!		space/tab, ??
+backspace, done				!		builtins
+up/down,					!			cd,
+left/right,					!			echo,
+env,						!			exit,
+env security,				!			env,
+malloc security,			!			setenv,
+fork/execve,				!			unsetenv,
+fork/execve security,		!		command execution/path,
+							!		error/command return,
+							!		">"/">>"/"<"/"|",
+							!		"&&"/"||",
+							!		";",
