@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/25 13:32:30 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/25 18:09:54 by Arno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void			is_backspace(t_clist *tmp, t_clist *head)
 	}
 }
 
-t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
+t_clist			*map_ascii(char *buf, t_clist **head, t_clist *tmp)
 {
 	t_clist		*new;
 
@@ -70,14 +70,16 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 	{
 		write(1, "\n", 1);
 		ft_printf("prompt ->");
-		free_clist(head);
-		head = create_clist();
-		return (head);
+		free_clist(*head);
+		*head = create_clist();
+		return (*head);
 	}
 	else if (buf[0] == 127) /* is backspace */
-		is_backspace(tmp, head);
+		is_backspace(tmp, *head);
 	else if (buf[0] == 27) /* is esc */
 	{
+		int fd = open("dump", O_CREAT | O_TRUNC | O_WRONLY);
+		(void)fd;
 		ft_printf("\n");
 		return (NULL);
 	}
@@ -102,11 +104,12 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 			tputs(tgetstr("ip", NULL), 1, ft_putschar); /* finish insert char */
 
 			tputs(tgetstr("ei", NULL), 1, ft_putschar); /* mode insertion off */
-			new =create_clist();
+			new = create_clist();
 			new->c = buf[0];
 			if (tmp->prev)
 				tmp->prev->next = new;
-
+			else
+				*head = new;
 			new->prev = tmp->prev;
 			tmp->prev = new;
 			new->next = tmp;
@@ -119,23 +122,29 @@ t_clist			*map_noascii(char *buf, t_clist *head, t_clist *tmp)
 {
 	(void)head;
 	(void)tmp;
-	if (KEYUP)
-		ft_printf("KEY UP");
-	else if (KEYDW)
-		ft_printf("KEY DOWN");
-	else if (KEYRT)
+	// if (KEYUP)
+		// ft_printf("KEY UP");
+	// else if (KEYDW)
+	// 	ft_printf("KEY DOWN");
+	if (KEYRT)
 	{
-		tputs(tgetstr("nd", NULL), 1, ft_putschar); /* move right */
-		tmp = tmp->next;
+		if (tmp->next)
+		{
+			tmp = tmp->next;
+			tputs(tgetstr("nd", NULL), 1, ft_putschar); /* move right */
+		}
 		return (tmp);
 	}
 	else if (KEYLF)
 	{
-		tputs(tgetstr("le", NULL), 1, ft_putschar); /* move left */
-		tmp = tmp->prev;
+		if (tmp->prev)
+		{
+			tmp = tmp->prev;
+			tputs(tgetstr("le", NULL), 1, ft_putschar); /* move left */
+		}
 		return (tmp);
 	}
-	ft_printf("\nprompt->");
+	// ft_printf("\nprompt->");
 	return (tmp);
 }
 
@@ -151,7 +160,7 @@ int					line_edition(void)
 	{
 		if (0 <= buf[0] && buf[1] == '\0')
 		{
-			tmp = map_ascii(buf, head, tmp);
+			tmp = map_ascii(buf, &head, tmp);
 			if (!tmp)
 				return (-1);
 		}
@@ -162,6 +171,7 @@ int					line_edition(void)
 		ft_strclr(buf);
 		int fd = open("dump", O_CREAT | O_TRUNC | O_WRONLY);
 		dprint_clist(fd, head);
+		close(fd);
 	}
 	return (0);
 }
