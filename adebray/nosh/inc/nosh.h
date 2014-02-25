@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nosh.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 21:41:20 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/24 13:55:21 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/25 13:23:47 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,8 @@ void				print_clist(t_clist *head);
 t_clist				*create_clist(void);
 void				free_clist(t_clist *elem);
 int					lign_nb(int cmp, int col_size);
+
+void				dprint_clist(int fd, t_clist *head);
+
 
 #endif

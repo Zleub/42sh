@@ -6,11 +6,22 @@
 /*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/23 02:06:10 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/23 02:10:30 by adebray          ###   ########.fr       */
+/*   Updated: 2014/02/25 13:23:26 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <nosh.h>
+
+void				dprint_clist(int fd, t_clist *head)
+{
+	if (!head)
+		return ;
+	while (head->next)
+	{
+		write(fd, &head->c, 1);
+		head = head->next;
+	}
+}
 
 void				print_clist(t_clist *head)
 {

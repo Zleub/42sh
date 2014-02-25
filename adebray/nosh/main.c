@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/24 14:23:12 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/25 13:32:30 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <nosh.h>
+
+#include <fcntl.h>
+
 
 int							tswitch(int i)
 {
@@ -92,13 +95,13 @@ t_clist			*map_ascii(char *buf, t_clist *head, t_clist *tmp)
 		}
 		else
 		{
-			tputs(tgetstr("im", NULL), 1, ft_putschar); /* move left */
-			tputs(tgetstr("ic", NULL), 1, ft_putschar); /* move left */
+			tputs(tgetstr("im", NULL), 1, ft_putschar); /* mode insersion on */
+			tputs(tgetstr("ic", NULL), 1, ft_putschar); /* insert char */
 
 			write(1, &buf[0], 1);
-			tputs(tgetstr("ip", NULL), 1, ft_putschar); /* move left */
+			tputs(tgetstr("ip", NULL), 1, ft_putschar); /* finish insert char */
 
-			tputs(tgetstr("ei", NULL), 1, ft_putschar); /* move left */
+			tputs(tgetstr("ei", NULL), 1, ft_putschar); /* mode insertion off */
 			new =create_clist();
 			new->c = buf[0];
 			if (tmp->prev)
@@ -122,7 +125,7 @@ t_clist			*map_noascii(char *buf, t_clist *head, t_clist *tmp)
 		ft_printf("KEY DOWN");
 	else if (KEYRT)
 	{
-		tputs(tgetstr("nd", NULL), 1, ft_putschar); /* move left */
+		tputs(tgetstr("nd", NULL), 1, ft_putschar); /* move right */
 		tmp = tmp->next;
 		return (tmp);
 	}
@@ -157,6 +160,8 @@ int					line_edition(void)
 			tmp = map_noascii(buf, head, tmp);
 		}
 		ft_strclr(buf);
+		int fd = open("dump", O_CREAT | O_TRUNC | O_WRONLY);
+		dprint_clist(fd, head);
 	}
 	return (0);
 }
