@@ -6,7 +6,7 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 00:25:40 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/26 07:34:35 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 19:02:16 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ struct			s_lx_arg
 	char		*s1;
 	char		*s2;
 	int			rule;
+	t_lx_rule	*link;
 	int			type;
 	t_lx_arg	*next;
 };

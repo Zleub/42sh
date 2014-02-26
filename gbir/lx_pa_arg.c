@@ -6,7 +6,7 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/17 20:28:32 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/26 07:59:07 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 19:45:02 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static t_lx_arg	*lx_pa_newarg(void)
 	ret->s1 = NULL;
 	ret->s2 = NULL;
 	ret->rule = -1;
+	ret->link = NULL;
 	ret->type = 0;
 	ret->next = NULL;
 	return (ret);
