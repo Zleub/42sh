@@ -6,47 +6,25 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/15 15:10:31 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/15 15:32:59 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 07:38:33 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh.h"
 #include "lexer.h"
 #include "libft.h"
-/*
-void			lx_lexer(char *line, t_lx_rul *first, t_lx_key *key)
+
+void			lx_lexer(t_lx_rule *first)
 {
-
-}
-
-void			lx_pars_lexerfile(char *file)
-{
-	static char	*line = NULL;
-	char		*tmp;
-	int			iscmd;
-
-	(void)first;
-	tmp = (line) ? line : cur;
-	iscmd = 0;
-	while (*tmp)
+	t_lx_arg	*cur;
+	while (first)
 	{
-		if (iscmd && *tmp == ' ' && *(tmp + 1) == ';')
+		cur = first->first;
+		while (cur)
 		{
-//			ft_putendl((line) ? line : cur);//new cmd
-			lx_lexer((line) ? line : cur, first, key);
-			free(cur);
-			if (line)
-				free(line);
-			line = NULL;
-			return ;
+			printf("RULE: [%s] [%s] [%d] [%d]\n", cur->s1, cur->s2, cur->rule, cur->type);
+			cur = cur->next;
 		}
-		else if (*tmp == '=')
-			iscmd = 1;
-		++tmp;
+		first = first->next;
 	}
-	if ((tmp = line) && (line = ft_strjoin(line, cur)))
-		allfree(2, cur, tmp);
-	else
-		line = cur;
 }
-*/

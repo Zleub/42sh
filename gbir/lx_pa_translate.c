@@ -6,7 +6,7 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/17 13:15:36 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/18 21:12:20 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 07:59:01 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,31 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static t_lx_arg	*lx_pa_firstrule(char *arg)
+static t_lx_arg	*lx_pa_firstrule(char *arg, t_lx_line *line, int i)
 {
 	t_lx_arg	*ret;
 
 	ret = NULL;
 //	printf("%s\n", arg);
-	puts("01");
-	printf("%p\n", arg);
 	while (*arg && (ft_iswhispa(*arg) || *arg == '|' || *arg == ','))
 		++arg;
-	puts("02");
 	if (*arg == ';' || !*arg)
 		return (ret);
-	puts("03");
+//	printf("    %.4s\n", arg);
 	if (*arg == '"')
-	{
-		puts("04");
 		ret = lx_pa_argstr(&arg);
-		ret->next = lx_pa_firstrule(arg);
+	else if (*arg == '[' || i == 1)
+	{
+		++arg;
+		ret = lx_pa_argexp(&arg);
+		i = (*(arg + 1) && *(arg + 1) == ']') ? 0 : 1;
+		if (*(arg + 1) == ']')
+			arg += 2;
 	}
-/*	else if (spe[2] == 1)
-			lx_pa_argexp(&tmp, &(*spe), &ret);
 	else
-		lx_pa_argrul(&tmp, &(*spe), &ret, cur->key);
-*/	return (ret);
+		ret = lx_pa_argrule(&arg, line);
+	ret->next = lx_pa_firstrule(arg, line, i);
+	return (ret);
 }
 
 t_lx_rule		*lx_pa_translate(t_lx_line *line)
@@ -50,22 +50,18 @@ t_lx_rule		*lx_pa_translate(t_lx_line *line)
 
 	tmp = ret = malloc(sizeof(t_lx_rule));
 	cur = line;
+//	printf("==%p\n", line);
 	while (cur)
 	{
-//		printf("key = %c  arg = %c    %p\n", *(cur->key), (cur->arg)[1], cur);
-//		printf("%p  %s\n", cur, cur->key);
-		puts("00001");
-		tmp->first = lx_pa_firstrule(cur->arg);
-		puts("00002");
+//		printf("key = %.5s  arg = %.5s    %p\n", cur->key, cur->arg, cur);
+//		printf("%p  %.5s\n", cur, cur->key);
+		if (cur->arg)
+			tmp->first = lx_pa_firstrule(cur->arg + 1, line, 0);
 		tmp->next = NULL;
-		puts("00003");
 		cur = cur->next;
-		puts("00004");
 		if (cur)
 			tmp = tmp->next = malloc(sizeof(t_lx_rule));
-		puts("00005");
 	}
-	puts("ici");
 /*	tmp = ret;
 	tmp->first = lx_pa_firstrule();
 	while ((tmp = tmp->next))

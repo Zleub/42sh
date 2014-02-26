@@ -6,7 +6,7 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 00:25:40 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/17 22:36:16 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 07:34:35 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ struct			s_lx_arg
 {
 	char		*s1;
 	char		*s2;
-	t_lx_rule	*rule;
+	int			rule;
 	int			type;
 	t_lx_arg	*next;
 };
@@ -59,6 +59,7 @@ t_lx_rule	*lx_pa_translate(t_lx_line *line);
 int			lx_pa_isspe(int *spe, char c);
 t_lx_arg	*lx_pa_argstr(char **tmp);
 t_lx_arg	*lx_pa_argexp(char **tmp);
-t_lx_arg	*lx_pa_argrule(char **tmp, char *key);
+t_lx_arg	*lx_pa_argrule(char **tmp, t_lx_line *line);
+void		lx_lexer(t_lx_rule *first);
 
 #endif

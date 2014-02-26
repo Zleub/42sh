@@ -6,7 +6,7 @@
 /*   By: gbir <gbir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 00:19:38 by gbir              #+#    #+#             */
-/*   Updated: 2014/02/17 12:36:19 by gbir             ###   ########.fr       */
+/*   Updated: 2014/02/26 07:33:03 by gbir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int		main(void)
 	fd = open("lexer.gmr", O_RDONLY);
 	while (read(fd, &tmp, 1024) > 0)
 		file = ft_strjoin(file, tmp);
-	lx_pars_lexerfile(file);
+	lx_lexer(lx_pars_lexerfile(file));
 	return (0);
 }
