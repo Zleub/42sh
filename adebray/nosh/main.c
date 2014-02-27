@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Arno <Arno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adebray <adebray@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:41:35 by adebray           #+#    #+#             */
-/*   Updated: 2014/02/25 18:09:54 by Arno             ###   ########.fr       */
+/*   Updated: 2014/02/27 13:39:19 by adebray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,10 +98,8 @@ t_clist			*map_ascii(char *buf, t_clist **head, t_clist *tmp)
 		else
 		{
 			tputs(tgetstr("im", NULL), 1, ft_putschar); /* mode insersion on */
-			tputs(tgetstr("ic", NULL), 1, ft_putschar); /* insert char */
 
 			write(1, &buf[0], 1);
-			tputs(tgetstr("ip", NULL), 1, ft_putschar); /* finish insert char */
 
 			tputs(tgetstr("ei", NULL), 1, ft_putschar); /* mode insertion off */
 			new = create_clist();
