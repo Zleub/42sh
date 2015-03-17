@@ -1,8 +1,8 @@
 Todo
 
 
-__noredirect mode (./42sh < file)
-unlimited entry size
-./42sh file
-interactive prompt
-precedence of operators
+__noredirect mode (./42sh < file)</br>
+unlimited entry size</br>
+./42sh file</br>
+interactive prompt</br>
+precedence of operators</br>
